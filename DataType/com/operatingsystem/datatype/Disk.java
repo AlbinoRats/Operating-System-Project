@@ -1,6 +1,7 @@
 package com.operatingsystem.datatype;
 
 public class Disk implements Device<Disk> {
+	//Disk list
 	private Disk[] listofDisk;
 	
 	@Override

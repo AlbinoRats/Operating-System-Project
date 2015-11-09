@@ -1,6 +1,7 @@
 package com.operatingsystem.datatype;
 
 public class Printer implements Device<Printer> {
+	//Printer list
 	private Printer[] listofPrinter;
 
 	@Override
