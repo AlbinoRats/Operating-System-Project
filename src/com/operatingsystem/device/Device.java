@@ -1,4 +1,4 @@
-package com.operatingsystem.datatype;
+package com.operatingsystem.device;
 // Interface to Disks
 public interface Device<Type> {
 	

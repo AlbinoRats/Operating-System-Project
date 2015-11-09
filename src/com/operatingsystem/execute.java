@@ -1,4 +1,6 @@
-package com.operatingsystem.main;
+package com.operatingsystem;
+
+import com.operatingsystem.states.SystemGeneration;
 
 public class execute {
 	public static void main(String args[]){

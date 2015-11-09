@@ -1,4 +1,4 @@
-package com.operatingsystem.datatype;
+package com.operatingsystem.device;
 
 public class Disk implements Device<Disk> {
 	//Disk list

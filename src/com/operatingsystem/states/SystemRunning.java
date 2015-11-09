@@ -1,4 +1,4 @@
-package com.operatingsystem.main;
+package com.operatingsystem.states;
 
 public class SystemRunning {
 	//0 for not running, 1 for running

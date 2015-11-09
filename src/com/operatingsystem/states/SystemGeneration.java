@@ -1,10 +1,10 @@
-package com.operatingsystem.main;
+package com.operatingsystem.states;
 
 import java.util.Scanner;
 
-import com.operatingsystem.datatype.Device;
-import com.operatingsystem.datatype.Disk;
-import com.operatingsystem.datatype.Printer;;
+import com.operatingsystem.device.Device;
+import com.operatingsystem.device.Disk;
+import com.operatingsystem.device.Printer;;
 
 public class SystemGeneration {
 	private int memory_size;
@@ -32,6 +32,7 @@ public class SystemGeneration {
 		System.out.println(memory_size+" Memory Size");
 		System.out.println(disk.getDeviceSize()+" Disk(s)");
 		System.out.println(printer.getDeviceSize()+" Printer(s)");
+		System.out.println("System is now running.");
 		
 		
 	}

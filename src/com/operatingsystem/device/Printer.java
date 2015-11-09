@@ -1,4 +1,4 @@
-package com.operatingsystem.datatype;
+package com.operatingsystem.device;
 
 public class Printer implements Device<Printer> {
 	//Printer list
