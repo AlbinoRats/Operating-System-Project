@@ -13,6 +13,10 @@ public class SystemRunning {
 	public boolean get_state(){
 		return isRunning;
 	}
-	
+	public void run(){
+		while(isRunning){
+			
+		}
+	}
 
 }

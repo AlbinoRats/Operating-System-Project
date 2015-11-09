@@ -1,5 +1,6 @@
 package com.operatingsystem.states;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import com.operatingsystem.device.Device;
@@ -20,6 +21,8 @@ public class SystemGeneration {
 		this.disk.setTotalDevice(amount);
 	}
 	public void generate_system(){
+		System.out.println("System is generating, please enter the required informations");
+		try{
 		Scanner scanner=new Scanner(System.in);
 		System.out.println("Please Enter the Memory Size");
 		set_memory(scanner.nextInt());
@@ -33,6 +36,10 @@ public class SystemGeneration {
 		System.out.println(disk.getDeviceSize()+" Disk(s)");
 		System.out.println(printer.getDeviceSize()+" Printer(s)");
 		System.out.println("System is now running.");
+		}catch(InputMismatchException e){
+			System.out.println("System crashed!\nYou've entered the wrong data type during system initialization");
+		}
+		
 		
 		
 	}

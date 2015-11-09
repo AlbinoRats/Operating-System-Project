@@ -1,24 +1,36 @@
 package com.operatingsystem.device;
 
 public class Printer implements Device<Printer> {
-	//Printer list
-	private Printer[] listofPrinter;
+	//Printer info
+
+	private String printer_name;
+	//0 for printer, 1 for disk
+	private boolean device_type;
 
 	@Override
-	public void setTotalDevice(int amount) {
-		// TODO Auto-generated method stub
-		listofPrinter=new Printer[amount];
+	public void setPrinterName(String name) {
+		this.printer_name=name;
 		
 	}
 
 	@Override
-	public Printer[] getDeviceArray() {
-		// TODO Auto-generated method stub
-		return listofPrinter;
+	public String getPrinterName() {
+		
+		return printer_name;
 	}
+
 	@Override
-	public int getDeviceSize(){
-		return listofPrinter.length;
+	public void setType(boolean t) {
+		this.device_type=t;
+		
 	}
+
+	@Override
+	public boolean getDeviceType() {
+		return device_type;
+	}
+	
+
+	
 
 }

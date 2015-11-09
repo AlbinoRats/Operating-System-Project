@@ -2,24 +2,33 @@ package com.operatingsystem.device;
 
 public class Disk implements Device<Disk> {
 	//Disk list
-	private Disk[] listofDisk;
-	
+	private String disk_name;
+	private boolean device_type;
+
 	@Override
-	public void setTotalDevice(int amount) {
-		// TODO Auto-generated method stub
-		listofDisk=new Disk[amount];
+	public void setPrinterName(String name) {
+		this.disk_name=name;
 		
 	}
 
 	@Override
-	public Disk[] getDeviceArray() {
-		// TODO Auto-generated method stub
-		return listofDisk;
+	public String getPrinterName() {
+		return disk_name;
 	}
+
 	@Override
-	public int getDeviceSize(){
-		return listofDisk.length;
+	public void setType(boolean t) {
+		
+		
 	}
+
+	@Override
+	public boolean getDeviceType() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	
+
 	
 
 }

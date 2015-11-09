@@ -1,11 +1,22 @@
 package com.operatingsystem.device;
 // Interface to Disks
-public interface Device<Type> {
+public class Device {
+	String device_name;
+	boolean device_type;
+	//sets the device name
+	public  void setPrinterName(String name){
+		this.device_name=name;
+	}
+	//gets the device name
+	public String getPrinterName(){
+		return device_name;
+	}
+	//returns the device type
+	public boolean getDeviceType(){
+		return device_type;
+	}
+	public Device(boolean type){
+		this.device_type=type;
+	}
 	
-	//sets the total amount of device
-	public abstract void setTotalDevice(int amount); 
-	//gets the device array
-	public abstract Type [] getDeviceArray();
-	//gets the size of device array
-	public abstract int getDeviceSize();
 }
