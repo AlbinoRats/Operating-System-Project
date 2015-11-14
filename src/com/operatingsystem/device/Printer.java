@@ -9,7 +9,7 @@ public class Printer extends Device {
 	
 	@Override
 	public  void setDeviceName(int device_number){
-		this.device_name="Printer"+device_number;
+		this.device_name="p"+device_number;
 	} 
 	
 

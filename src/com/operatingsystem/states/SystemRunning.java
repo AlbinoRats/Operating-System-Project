@@ -1,11 +1,17 @@
 package com.operatingsystem.states;
 
+import com.operatingsystem.device.Device;
+import com.operatingsystem.processor.CPU;
+
 public class SystemRunning {
 	//0 for not running, 1 for running
 	private boolean isRunning;
-	
-	public SystemRunning(){
+	private int size;
+	private Device[]list;
+	public SystemRunning(int size, Device[]list){
 		this.isRunning=true;
+		this.size=size;
+		this.list=list;
 	}
 	public void state_switch(){
 		this.isRunning=!isRunning;
@@ -14,9 +20,10 @@ public class SystemRunning {
 		return isRunning;
 	}
 	public void run(){
-		while(isRunning){
-			
-		}
+		CPU cpu=new CPU(size,list);
+		
+			cpu.start();
+		
 	}
 
 }

@@ -31,18 +31,18 @@ public class SystemGeneration {
 		set_printer(scanner.nextInt());
 		System.out.println("Please Enter the Amount of Disks" );
 		set_disk(scanner.nextInt());
-		scanner.close();
 		device_list_set_up();
 		System.out.println("Your system has been installed with: ");
 		System.out.println(memory_size+" Bytes of memory");
 		System.out.println(disk_size+" Disk(s)");
 		System.out.println(printer_size+" Printer(s)");
 		System.out.println("System is now running.");
+		
 		}catch(InputMismatchException e){
 			System.out.println("System crashed!\nYou've entered the wrong data type during system initialization");
 		}
 		
-		Test();
+		//Test();
 		
 	}
 	private void device_list_set_up(){
@@ -60,8 +60,14 @@ public class SystemGeneration {
 	}
 	private void Test(){
 		for(Device itt: DeviceList){
-			System.out.print(itt.getDeviceName()+" ");
+			System.out.println(itt.getDeviceName()+" ");
 		}
+	}
+	public int getMemory(){
+		return memory_size;
+	}
+	public Device[] getDeviceList(){
+		return DeviceList;
 	}
 	public SystemGeneration(){
 		

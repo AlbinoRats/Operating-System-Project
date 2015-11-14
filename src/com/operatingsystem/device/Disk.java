@@ -9,7 +9,7 @@ public class Disk extends Device {
 
 	@Override
 	public  void setDeviceName(int device_number){
-		this.device_name="Disk"+device_number;
+		this.device_name="d"+device_number;
 	} 
 	
 
