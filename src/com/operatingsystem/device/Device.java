@@ -11,7 +11,7 @@ public class Device {
 	private boolean device_type;
 	// sets the device name
 	private Queue<PCB> device_queue;
-	private PCB current;
+	protected PCB current;
 	public void setDeviceName(int device_number) {
 		// override in child class
 	}
@@ -61,20 +61,27 @@ public class Device {
 	private PCB dequeue() {
 		return device_queue.remove();
 	}
-	public String queue_status() {
-		String status = "Process that are in " + device_name + " queue are ";
+	public void queue_status() {
+		
 		if (device_queue.isEmpty()) {
-			status = " No Process in " + device_name + "'s queue";
+			System.out.println( " No Process in " + device_name + "'s queue");
 		} else {
+			System.out.println("Process that are in " + device_name + " queue are ");
 			for (PCB itt : device_queue) {
-				status += itt.processor_id();
+				if(itt.isRead){
+					System.out.println(itt.processor_id()+"  "+itt.file_name+"  "+"Read Operation"+"  ");
+				}
+				else{
+					System.out.println(itt.processor_id()+"  "+itt.file_name+"  "+"Write Operation"+"  "
+				+Double.toString(itt.file_size));
+				}
 			}
 		}
-		return status;
+		
 	}
 	
-	public String getCurrentTaskInfo(){
+	public void getCurrentTaskInfo(){
 		//to be overriden
-		return null;
+		
 	}
 }

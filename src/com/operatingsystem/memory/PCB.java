@@ -9,40 +9,50 @@ public class PCB {
 	private int processor_size;
 	public int begin;
 	public int end;
-	private String file_name;
-	private double file_size;
-	private boolean isRead;
+	public String file_name;
+	public double file_size;
+	public boolean isRead;
 	private Device device;
-	public PCB(int id,int size){
+
+	public PCB(int id, int size) {
 		set_size(size);
 		set_id(id);
 	}
-	public void set_size(int size){
-		this.size=size;
+
+	public void set_size(int size) {
+		this.size = size;
 	}
-	public void set_id(int processor_id){
-		this.processor_id="p"+processor_id;
+
+	public void set_id(int processor_id) {
+		this.processor_id = "p" + processor_id;
 	}
-	public void switchUsed(){
-		this.being_used=!being_used;
+
+	public void switchUsed() {
+		this.being_used = !being_used;
 	}
-	public boolean get_used(){
+
+	public boolean get_used() {
 		return being_used;
 	}
-	public int get_size(){
+
+	public int get_size() {
 		return size;
 	}
-	public String processor_id(){
+
+	public String processor_id() {
 		return processor_id;
 	}
-	public void setIOInfo(String name,double size, boolean isRead, Device device){
-		this.file_name=name;
-		this.file_size=size;
-		this.isRead=isRead;
-		this.device=device;
+
+	public void setIOInfo(String name, double size, int isRead, Device device) {
+		this.file_name = name;
+		this.file_size = size;
+		if (isRead != 0) {
+			this.isRead = true;
+		} else {
+			this.isRead = false;
+		}
+		this.device = device;
 	}
-	public Device getDevice(){
-		return device;
-	}
+
 
 }
