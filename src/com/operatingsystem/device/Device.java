@@ -1,14 +1,19 @@
 package com.operatingsystem.device;
-// Interface to Disks
+
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class Device {
-	String device_name;
-	boolean device_type;
+	protected String device_name;
+	//0 for disk, 1 for printer
+	private boolean device_type;
 	//sets the device name
-	public  void setPrinterName(String name){
-		this.device_name=name;
+	private Queue<Device> device_queue;
+	public  void setDeviceName(int device_number){
+		//override in child class
 	}
 	//gets the device name
-	public String getPrinterName(){
+	public String getDeviceName(){
 		return device_name;
 	}
 	//returns the device type
@@ -18,5 +23,7 @@ public class Device {
 	public Device(boolean type){
 		this.device_type=type;
 	}
-	
+	public void createDeviceQueue(){
+		device_queue=new LinkedList<Device>();
+	}
 }

@@ -1,36 +1,16 @@
 package com.operatingsystem.device;
 
-public class Printer implements Device<Printer> {
-	//Printer info
+public class Printer extends Device {
 
-	private String printer_name;
-	//0 for printer, 1 for disk
-	private boolean device_type;
-
-	@Override
-	public void setPrinterName(String name) {
-		this.printer_name=name;
-		
-	}
-
-	@Override
-	public String getPrinterName() {
-		
-		return printer_name;
-	}
-
-	@Override
-	public void setType(boolean t) {
-		this.device_type=t;
-		
-	}
-
-	@Override
-	public boolean getDeviceType() {
-		return device_type;
+	public Printer(boolean type) {
+		super(type);
+		// TODO Auto-generated constructor stub
 	}
 	
-
+	@Override
+	public  void setDeviceName(int device_number){
+		this.device_name="Printer"+device_number;
+	} 
 	
 
 }
