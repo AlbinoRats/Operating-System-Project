@@ -1,9 +1,8 @@
-package com.operatingsystem.device;
+package operatingsystem;
 
 import java.util.LinkedList;
 import java.util.Queue;
 
-import com.operatingsystem.memory.PCB;
 
 public class Device {
 	protected String device_name;

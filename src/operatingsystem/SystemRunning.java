@@ -1,7 +1,5 @@
-package com.operatingsystem.states;
+package operatingsystem;
 
-import com.operatingsystem.device.Device;
-import com.operatingsystem.processor.CPU;
 
 public class SystemRunning {
 	//0 for not running, 1 for running

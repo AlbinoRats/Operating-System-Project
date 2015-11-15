@@ -1,6 +1,5 @@
-package com.operatingsystem.memory;
+package operatingsystem;
 
-import com.operatingsystem.device.Device;
 
 public class PCB {
 	private int size;

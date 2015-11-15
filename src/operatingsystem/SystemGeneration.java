@@ -1,11 +1,8 @@
-package com.operatingsystem.states;
+package operatingsystem;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-import com.operatingsystem.device.Device;
-import com.operatingsystem.device.Disk;
-import com.operatingsystem.device.Printer;
 
 public class SystemGeneration {
 	private int memory_size;

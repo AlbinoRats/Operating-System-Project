@@ -1,12 +1,9 @@
-package com.operatingsystem.processor;
+package operatingsystem;
 
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
-import com.operatingsystem.device.Device;
-import com.operatingsystem.memory.Memory;
-import com.operatingsystem.memory.PCB;
 
 public class CPU {
 	private Queue<PCB> ready_queue;
@@ -40,7 +37,6 @@ public class CPU {
 			System.out
 					.println("Enter command (A= new process, t= terminate current process,S=snapshot");
 			input = scanner.nextLine();
-			System.out.println(input);
 			switch (input) {
 			case "A":
 				System.out

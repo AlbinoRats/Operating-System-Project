@@ -1,7 +1,5 @@
-package com.operatingsystem;
+package operatingsystem;
 
-import com.operatingsystem.states.SystemGeneration;
-import com.operatingsystem.states.SystemRunning;
 
 public class execute {
 	public static void main(String args[]){

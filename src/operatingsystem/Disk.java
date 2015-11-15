@@ -1,4 +1,4 @@
-package com.operatingsystem.device;
+package operatingsystem;
 
 public class Disk extends Device {
 
